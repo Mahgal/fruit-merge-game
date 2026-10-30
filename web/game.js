@@ -176,7 +176,7 @@ function handleDrop(e) {
   canDrop = false;
 
   if (currentFruitBody) {
-    currentFruitBody.isStatic = false;
+    Matter.Body.setStatic(currentFruitBody, false);
     currentFruitBody.isSensor = false; // Make it interact physically
     currentFruitBody = null;
 
